@@ -37,12 +37,7 @@
         <div class="d-flex align-items-center w-100">
           <div class="position-relative flex-grow-1 me-2">
             <i class="bi bi-emoji-smile emoji-icon position-absolute"></i>
-            <input
-              type="text"
-              v-model="newMessage"
-              class="form-control ps-5"
-              placeholder="Type a message..."
-            />
+            <input type="text" v-model="newMessage" class="form-control ps-5" placeholder="Type a message..."/>
           </div>
           <button class="btn send-btn" @click="sendMessage">
             <i class="bi bi-send"></i>

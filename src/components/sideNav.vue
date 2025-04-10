@@ -9,15 +9,7 @@
       <!-- Chat List (Scroll Area) -->
       <div class="overflow-auto flex-grow-1">
         <ul class="nav flex-column">
-          <li
-            v-for="(user, index) in users"
-            :key="index"
-            class="nav-item chat-item"
-            :class="{ 'active-nav': active === index }"
-            @mouseover="hover = index"
-            @mouseleave="hover = null"
-            @click="selectUser(index)"
-          >
+          <li v-for="(user, index) in users" :key="index" class="nav-item chat-item" :class="{ 'active-nav': active === index }" @mouseover="hover = index" @mouseleave="hover = null" @click="selectUser(index)">
             <a class="nav-link p-3" href="#">
               <div class="d-flex align-items-start">
                 <div class="position-relative me-3">
@@ -28,17 +20,11 @@
                     width="45"
                     height="45"
                   />
-                  <span
-                    class="status-indicator"
-                    :class="user.online ? 'bg-success' : 'bg-secondary'"
-                  ></span>
+                  <span class="status-indicator" :class="user.online ? 'bg-success' : 'bg-secondary'"></span>
                 </div>
                 <div class="flex-grow-1">
                   <p class="mb-1 fw-bold small text-truncate text-muted">{{ user.name }}</p>
-                  <small
-                    class="text-muted d-block message-truncate"
-                    v-html="user.message"
-                  ></small>
+                  <small class="text-muted d-block message-truncate" v-html="user.message"></small>
                 </div>
                 <div class="d-flex align-items-center justify-content-end">
                   <i v-if="user.send" class="bi bi-check-all me-2 text-muted"></i><span v-if="user.count > 0" class="badge rounded-pill text-white total-message-count">{{ user.count }}</span>
